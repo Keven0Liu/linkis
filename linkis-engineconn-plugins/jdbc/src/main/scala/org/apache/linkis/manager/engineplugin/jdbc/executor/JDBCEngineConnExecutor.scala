@@ -177,7 +177,7 @@ class JDBCEngineConnExecutor(override val outputPrintLimit: Int, val id: Int)
       if (connection != null) {
         try {
           if (!connection.getAutoCommit) connection.commit()
-          connection.close()
+          //connection.close()
         } catch {
           case e: SQLException => logger.warn("close connection error.", e)
         }
